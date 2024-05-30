@@ -1,0 +1,34 @@
+m=str(input('Enter a message : '))
+s=list(m)
+l=len(m)
+a=[]
+n=int(input('Enter the shift value required : '))
+for i in range(l):
+    a.append(ord(s[i]))
+e=[]
+for i in range(l):
+    e.append(a[i]+(n*5))
+em=[]
+for i in range(l):
+    em.append(chr(e[i]))
+def listToString(s):
+    str1 = ""
+    for ele in s:
+        str1 += ele
+    return str1
+print("The encrypted message is :",listToString(em))
+d=[]
+for i in range(l):
+    d.append(e[i]-(n*5))
+dm=[]
+for i in range(l):
+    dm.append(chr(d[i]))
+print("The decrypted message is :",listToString(dm))
+    
+
+
+    
+
+
+    
+    
